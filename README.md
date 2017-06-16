@@ -35,6 +35,8 @@ $ sgp -h
     -h, --help                   output usage information
     -V, --version                output the version number
     -s, --src                    salesforce src directory path [./src]
+    -a, --api-version            salesforce API version [39.0]
+    -o, --output                 salesforce package.xml directory path [./src]
 ```
 
 ### Module
@@ -43,6 +45,8 @@ $ sgp -h
   var sgp = require('sfdc-generate-package');
 
   sgp({
+    'src':'', // salesforce src directory path : ./src
+    '39.0':'', // salesforce API verion : 39.0
     'src':'' // salesforce src directory path : ./src
   }, console.log);
 ```
@@ -51,8 +55,8 @@ $ sgp -h
 ## Built With
 
 * [commander](https://github.com/tj/commander.js/) - The complete solution for node.js command-line interfaces, inspired by Ruby's commander.
-* [extendify](https://github.com/bigShai/extendify) - Deep extend with customizable behavior.
 * [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) - XML to JavaScript object converter.
+* [directory-tree](https://github.com/mihneadb/node-directory-tree) - Creates a JavaScript object representing a directory tree..
 
 ## Versioning
 

@@ -19,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
-    "extendify": "^1.0.0",
-    "xml2js": "^0.4.17"
+    "directory-tree": "^2.0.0",
+    "xml2js": "^0.4.17",
+    "xmlbuilder": "^9.0.0"
   }
 }

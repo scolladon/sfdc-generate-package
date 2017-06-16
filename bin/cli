@@ -8,6 +8,8 @@ program
   .description(pjson.description)
   .version(pjson.version)
   .option('-s, --src [dir]', 'salesforce src directory path [./src]', './src')
+  .option('-a, --api-version [version]', 'salesforce API version [39.0]', '39.0')
+  .option('-o, --output [dir]', 'salesforce package.xml directory path [./src]', './src')
   .parse(process.argv);
 
 orchestrator(program, console.log)
