@@ -1,12 +1,9 @@
 'use strict';
-const fs = require('fs');
 const xml2js = require('xml2js');
 const dirTree = require('directory-tree');
 const metadata = require('./lib/utils/metadata');
 const xmlbuilder = require('xmlbuilder');
 const typeStrategyFactory = require('./lib/factories/type-strategy-factory.js');
-
-const PACKAGE_XML_FILE_NAME = 'package.xml';
 
 module.exports = (config,logger) => {
 
@@ -28,7 +25,6 @@ module.exports = (config,logger) => {
     xml.ele('version')
     .t(config.apiVersion);
     const xmlContent = xml.end({ pretty: true, indent: '  ', newline: '\n' });
-    fs.writeFileSync(config.output + '/' + PACKAGE_XML_FILE_NAME, xmlContent);
-    resolve();
+    resolve(xmlContent);
   });
 };
