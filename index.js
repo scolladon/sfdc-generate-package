@@ -25,7 +25,7 @@ module.exports = (config,logger) => {
       const xml = xmlbuilder.create('Package')
       .att('xmlns', 'http://soap.sforce.com/2006/04/metadata')
       .dec('1.0', 'UTF-8');
-      result.forEach(elem => xml.importDocument(elem));
+      result.forEach(elem => {if(!!elem) xml.importDocument(elem)});
       xml.ele('version')
       .t(config.apiVersion);
       const xmlContent = xml.end({ pretty: true, indent: '  ', newline: '\n' });
