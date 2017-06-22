@@ -36,7 +36,7 @@ $ sgp -h
     -V, --version                output the version number
     -s, --src                    salesforce src directory path [./src]
     -a, --api-version            salesforce API version [40.0]
-    -o, --output                 salesforce package.xml directory path [./src]
+    -o, --output                 salesforce package.xml directory path [.]
 ```
 
 ### Module
