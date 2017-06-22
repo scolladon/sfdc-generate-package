@@ -15,20 +15,17 @@ module.exports = (config,logger) => {
   }
   // The module return this promise
   // This is where the job is done
-  return new Promise((resolve, reject) => {
+  const promise = new Promise((resolve, reject) => {
     const typeStrategyFactory = new TypeStrategyFactory();
     Promise.all(
-      dirTree(config.src).children.filter(child => metadata[child.name] !== undefined && child.children != undefined )
+      dirTree(config.src).children.filter(child => metadata[child.name] !== undefined && child.children != undefined && child.children.length > 0)
       .sort((a,b) => metadata[a.name].xmlName.localeCompare(metadata[b.name].xmlName))
       .map(elem => typeStrategyFactory.getTypeStrategy(elem).build())
     ).then(result => {
       const xml = xmlbuilder.create('Package')
       .att('xmlns', 'http://soap.sforce.com/2006/04/metadata')
       .dec('1.0', 'UTF-8');
-
-      result.forEach(elem => {if(!!elem) xml.importDocument(elem)});
-        //xml.importDocument);
-
+      result.forEach(elem => xml.importDocument(elem));
       xml.ele('version')
       .t(config.apiVersion);
       const xmlContent = xml.end({ pretty: true, indent: '  ', newline: '\n' });
@@ -36,4 +33,5 @@ module.exports = (config,logger) => {
       resolve();
     }).catch(reject);
   });
+  return promise;
 };
