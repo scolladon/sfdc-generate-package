@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const fs = require('fs');
 const orchestrator = require('../index.js');
 const pjson = require('../package.json');
-
-const PACKAGE_XML_FILE_NAME = 'package.xml';
 
 program
   .description(pjson.description)
@@ -16,7 +13,6 @@ program
   .parse(process.argv);
 
 orchestrator(program, console.log)
-.then(xmlContent => fs.writeFileSync(program.output + '/' + PACKAGE_XML_FILE_NAME, xmlContent))
 .catch(function(err){
   console.log(err);
 });
