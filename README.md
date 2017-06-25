@@ -51,6 +51,9 @@ $ sgp -h
   }, console.log);
 ```
 
+### Module
+
+Add CLI parameters to build package.xml for only certain types
 
 ## Built With
 

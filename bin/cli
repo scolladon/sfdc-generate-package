@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+'use strict';
+
+// TODO improve parameter to concentrate on create only certaine type
 
 const program = require('commander');
 const orchestrator = require('../index.js');
@@ -14,5 +17,5 @@ program
 
 orchestrator(program, console.log)
 .catch(function(err){
-  console.log(err);
+  throw err;
 });
