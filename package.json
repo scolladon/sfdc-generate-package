@@ -1,6 +1,6 @@
 {
   "name": "sfdc-generate-package",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "generate package.xml from source",
   "keyword": [
     "salesforce",
