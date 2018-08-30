@@ -29,7 +29,7 @@ module.exports = (config,logger) => {
       [].concat(...result).filter(elem => !!elem).forEach(elem => xml.importDocument(elem));
       xml.ele('version')
       .t(config.apiVersion);
-      const xmlContent = xml.end({ pretty: true, indent: '  ', newline: '\n' });
+      const xmlContent = xml.end({ pretty: true, indent: config.indent || '    ', newline: '\n' });
       fs.writeFileSync(config.output + '/' + PACKAGE_XML_FILE_NAME, xmlContent);
       resolve();
     }).catch(reject);
