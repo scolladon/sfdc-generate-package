@@ -47,7 +47,8 @@ $ sgp -h
   sgp({
     'src':'', // salesforce src directory path : ./src
     '40.0':'', // salesforce API verion : 40.0
-    'src':'' // salesforce src directory path : ./src
+    'output':'', // salesforce src directory path : ./src
+    'indent':'  ' // the number of space for the xml indentation (optionnal attibute)
   }, console.log);
 ```
 
@@ -69,6 +70,7 @@ Add CLI parameters to build package.xml for only certain types
 ## Authors
 
 * **Sebastien Colladon** - *Initial work* - [scolladon](https://github.com/scolladon)
+* **Baptiste Bieber** - *Add functionalities* - [baptistebieber](https://github.com/baptistebieber)
 
 ## License
 
