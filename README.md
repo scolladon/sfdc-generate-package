@@ -46,7 +46,7 @@ $ sgp -h
 
   sgp({
     'src':'', // salesforce src directory path : ./src
-    '40.0':'', // salesforce API verion : 40.0
+    'apiVersion':'40.0', // salesforce API verion : 40.0
     'output':'', // salesforce src directory path : ./src
     'indent':'  ' // the number of space for the xml indentation (optionnal attibute)
   }, console.log);
