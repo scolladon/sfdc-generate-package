@@ -71,6 +71,7 @@ Add CLI parameters to build package.xml for only certain types
 
 * **Sebastien Colladon** - *Initial work* - [scolladon](https://github.com/scolladon)
 * **Baptiste Bieber** - *Add functionalities* - [baptistebieber](https://github.com/baptistebieber)
+* **Julien COLIN** - *Add metadata* - [colin-julien](https://github.com/colin-julien)
 
 ## License
 
