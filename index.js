@@ -7,7 +7,7 @@ const TypeStrategyFactory = require('./lib/factories/type-strategy-factory.js');
 
 const PACKAGE_XML_FILE_NAME = 'package.xml';
 
-module.exports = ({ src, output, apiVersion, ident }, logger) => {
+module.exports = ({ src, output, apiVersion, indent = '    ' }, logger) => {
 
   // Check if we have enough config options
   if(!src) {
@@ -30,7 +30,7 @@ module.exports = ({ src, output, apiVersion, ident }, logger) => {
       [].concat(...result).filter(elem => !!elem).forEach(elem => xml.importDocument(elem));
       xml.ele('version')
       .t(apiVersion);
-      const xmlContent = xml.end({ pretty: true, indent: indent || '    ', newline: '\n' });
+      const xmlContent = xml.end({ indent, pretty: true, newline: '\n' });
       fs.writeFileSync(output + '/' + PACKAGE_XML_FILE_NAME, xmlContent);
       resolve();
     }).catch(reject);
