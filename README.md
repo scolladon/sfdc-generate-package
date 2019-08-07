@@ -4,8 +4,7 @@ generate package.xml from source
 
 ## Getting Started
 
-Works in Unix like system.
-Windows is not tested.
+Works in Windows and Unix like systems.
 
 ### Installing
 
