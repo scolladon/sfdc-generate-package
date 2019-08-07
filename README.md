@@ -4,8 +4,7 @@ generate package.xml from source
 
 ## Getting Started
 
-Works in Unix like system.
-Windows is not tested.
+Works in Windows and Unix like systems.
 
 ### Installing
 
@@ -72,6 +71,7 @@ Add CLI parameters to build package.xml for only certain types
 * **Sebastien Colladon** - *Initial work* - [scolladon](https://github.com/scolladon)
 * **Baptiste Bieber** - *Add functionalities* - [baptistebieber](https://github.com/baptistebieber)
 * **Julien COLIN** - *Add metadata* - [colin-julien](https://github.com/colin-julien)
+* **Ariel Siler** - *Add auto generated metadata.js file from Metadata API using [this project](https://github.com/ArielS1/sfdc-generate-package-metadata-generator)* - [ArielS1](https://github.com/ArielS1)
 
 ## License
 
